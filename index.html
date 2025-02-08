@@ -93,13 +93,28 @@
         }
 
         .imagen-izquierda {
-            left: 25%; /* Centradas más cerca del contenido */
+            left: 25%;
             transform: rotate(-15deg);
         }
 
         .imagen-derecha {
-            right: 25%; /* Centradas más cerca del contenido */
+            right: 25%;
             transform: rotate(15deg);
+        }
+
+        /* 🔹 Ajustes responsivos para celulares 🔹 */
+        @media (max-width: 600px) {
+            .imagen-izquierda, .imagen-derecha {
+                position: static;
+                transform: none;
+                width: 100px;
+                display: block;
+                margin: 10px auto;
+            }
+
+            .container {
+                width: 90%;
+            }
         }
 
     </style>
@@ -153,7 +168,6 @@
             "Me encantaas Wendyta entiendelo 💘",
             "No te voy a dejar picarle aqui 😛",
             "Tssss 😬"
-
         ];
 
         botonNo.addEventListener("mouseover", function () {
